@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('laravel');
 });
+Route::get('/{name}', function(){
+  return redirect('/');
+})->where('name', '[A-Za-z]+');

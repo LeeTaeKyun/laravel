@@ -12387,7 +12387,8 @@ var About = __webpack_require__(55);
 var routes = [{ path: '/home', component: Home }, { path: '/about', component: About }];
 
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
-  // mode: 'history',
+
+  mode: 'history',
   routes: routes // short for `routes: routes`
 });
 
@@ -46453,7 +46454,7 @@ var render = function() {
             _c(
               "router-link",
               { staticClass: "navbar-item", attrs: { to: "/home" } },
-              [_vm._v("Home")]
+              [_vm._v("Home!!")]
             ),
             _vm._v(" "),
             _c(
@@ -46473,20 +46474,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      { staticClass: "navbar-item", attrs: { href: "https://bulma.io" } },
-      [
-        _c("img", {
-          attrs: {
-            src: "https://bulma.io/images/bulma-logo.png",
-            alt: "Bulma: a modern CSS framework based on Flexbox",
-            width: "112",
-            height: "28"
-          }
-        })
-      ]
-    )
+    return _c("a", { staticClass: "navbar-item", attrs: { href: "/" } }, [
+      _c("img", {
+        attrs: {
+          src: "https://bulma.io/images/bulma-logo.png",
+          alt: "Bulma: a modern CSS framework based on Flexbox",
+          width: "112",
+          height: "28"
+        }
+      })
+    ])
   }
 ]
 render._withStripped = true

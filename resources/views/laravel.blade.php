@@ -7,7 +7,6 @@
   </head>
   <body>
     <div class="" id="app">
-
       <Myheader></Myheader>
       <div class="container">
         <router-view></router-view>
