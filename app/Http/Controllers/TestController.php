@@ -16,6 +16,17 @@ class TestController extends Controller
         //
     }
 
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function __invoke()
+    {
+        return 'Test Controller Invoke';
+    }
+
     /**
      * Show the form for creating a new resource.
      *

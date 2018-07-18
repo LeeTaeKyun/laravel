@@ -17,15 +17,19 @@ let Myfooter = require('./components/Myfooter.vue');
 
 let Home = require('./components/Home.vue');
 let About = require('./components/About.vue');
+let ExampleComponent = require('./components/ExampleComponent.vue');
+let FileUploadForm = require('./components/FileUploadForm.vue');
 
 const routes = [
   { path: '/home', component: Home },
-  { path: '/about', component: About }
+  { path: '/about', component: About },
+  { path: '/example', component: ExampleComponent },
+  { path: '/file', component: FileUploadForm }
 ]
 
 const router = new VueRouter({
 
-	mode: 'history',
+	//mode: 'history',
   routes // short for `routes: routes`
 })
 

@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('laravel');
-});
-Route::get('/{name}', function(){
-  return redirect('/');
+
+Route::get('/laravel/{name}', function(){
+  return redirect('welcome');
 })->where('name', '[A-Za-z]+');
+
+
+Route::resource('laravel', 'LaravelController');
+Route::post('/fileUpload', 'ImgController@fileUpload');
