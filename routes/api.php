@@ -24,7 +24,7 @@ Route::post('/upload', 'UploadController@uploadSubmit');
 Route::get('articles', function() {
     // If the Content-Type and Accept headers are set to 'application/json',
     // this will return a JSON structure. This will be cleaned up later.
-    return Article::all();
+    return Article::list();
 });
 
 Route::get('articles/{id}', function($id) {
@@ -48,9 +48,9 @@ Route::delete('articles/{id}', function($id) {
     return 204;
 });
 
-
+Route::post('login', 'Auth\LoginController@login');
 Route::post('register', 'Auth\RegisterController@register');
-Route::get('articles', 'ArticleController@index');
+Route::get('articles', 'ArticleController@list');
 Route::get('articles/{article}', 'ArticleController@show');
 Route::post('articles', 'ArticleController@store');
 Route::put('articles/{article}', 'ArticleController@update');

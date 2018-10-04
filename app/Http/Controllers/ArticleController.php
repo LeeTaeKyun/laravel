@@ -15,7 +15,11 @@ class ArticleController extends Controller
   {
       return $article;
   }
+  public function list(Request $reqeust)
+  {
 
+    return Article::all();
+  }
   public function store(Request $request)
   {
       $article = Article::create($request->all());
